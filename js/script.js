@@ -59,15 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial load
     router();
 
-    // Scroll to top functionality
-    const scrollToTopButton = document.getElementById('scroll-to-top');
-    if (scrollToTopButton) {
-        scrollToTopButton.addEventListener('click', e => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
 });
