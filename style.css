@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e8e8e8;
+}
+
+/* NEW: Top blue bar without borders - full width */
+.top-bar {
+    background: #001f3f;
+    color: white;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 120px;
+    width: 100%;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    background: rgba(255,255,255,0.2);
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.company-info h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.company-info .slogan {
+    font-size: 16px;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.announcement-box {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 350px;
+}
+
+.announcement-box .date {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.announcement-box .title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.announcement-box .subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.announcement-box .link {
+    color: #87CEEB;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.acencia-logo svg {
+    width: 300px;
+    height: 90px;
+}
+
+.acencia-text {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    fill: white;
+    dominant-baseline: hanging;
+}
+
+.tagline-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    fill: white;
+    dominant-baseline: hanging;
+}
+
+/* Original container with margin */
+.main-wrapper {
+    padding: 15px;
+}
+
+/* Main container with border/margin like in screenshot */
+.page-container {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header - Single Blue Bar with Search on Right */
+.header {
+    background: #001f3f;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 70px;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-label {
+    color: white;
+    font-size: 14px;
+}
+
+.search-input {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-btn {
+    background: white;
+    color: #001f3f;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    min-height: 500px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: auto;
+    min-width: 150px;
+    background: #333;
+    color: white;
+}
+
+.sidebar-item {
+    background: #555;
+    padding: 18px 20px;
+    border-bottom: 1px solid #666;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.sidebar-item:hover {
+    background: #001f3f;
+}
+
+.sidebar-item.active {
+    background: #001f3f;
+    font-weight: bold;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 40px;
+    background: white;
+    min-height: 500px;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .main-wrapper {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 120px 20px;
+        min-height: 300px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
