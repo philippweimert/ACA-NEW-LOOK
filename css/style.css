@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -78,7 +82,6 @@ body {
 /* Main container with border/margin like in screenshot */
 .page-container {
     background: white;
-    border: 1px solid #ccc;
     border-radius: 12px;
     overflow: hidden;
     max-width: 1400px;
@@ -138,8 +141,8 @@ body {
 /* Sidebar */
 .sidebar {
     width: auto;
-    min-width: 150px;
-    background: #333;
+    min-width: 200px; /* Increased min-width for better spacing */
+    background: transparent; /* Removed the gray background */
     color: white;
     position: sticky;
     top: 110px;
@@ -148,22 +151,28 @@ body {
 }
 
 .sidebar-item {
-    background: #555;
-    padding: 18px 20px;
-    border-bottom: 1px solid #666;
+    background: #001f3f; /* Dark blue background for floating items */
+    color: white;
+    padding: 15px 25px;
+    margin-bottom: 10px; /* Space between items */
+    border-radius: 8px; /* Rounded corners */
     cursor: pointer;
-    transition: background 0.3s;
-    font-size: 14px;
+    transition: all 0.3s ease;
+    font-size: 16px;
     white-space: nowrap;
+    border: 1px solid transparent; /* Placeholder for hover effect */
 }
 
 .sidebar-item:hover {
-    background: #001f3f;
+    background: #003366; /* Lighter blue on hover */
+    transform: translateX(5px); /* Slight move effect */
 }
 
 .sidebar-item.active {
-    background: #001f3f;
+    background: white; /* White background for active item */
+    color: #001f3f; /* Dark blue text */
     font-weight: bold;
+    border: 1px solid #001f3f; /* Border for active item */
 }
 
 .sidebar a {
@@ -177,6 +186,7 @@ body {
     padding: 40px;
     background: white;
     min-height: 500px;
+    border-left: 1px solid #e8e8e8; /* Light border to separate from sidebar */
 }
 
 @media (max-width: 768px) {
@@ -351,5 +361,149 @@ body {
 
     .form-row .form-group {
         margin-bottom: 20px;
+    }
+}
+
+/* bAV Page Specific Styles */
+.page-title {
+    color: #001f3f;
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #001f3f;
+    padding-bottom: 10px;
+}
+.hero-section {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+.title-video-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+.hero-title {
+    color: #001f3f;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+.video-placeholder {
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    position: relative;
+}
+.play-button {
+    width: 60px;
+    height: 60px;
+    background: #001f3f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.video-text {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #001f3f;
+    font-size: 14px;
+}
+.button-row {
+    display: flex;
+}
+.cta-button {
+    background: #001f3f;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.cta-button:hover {
+    background: #003366;
+}
+.section {
+    border-top: 3px solid #001f3f;
+    padding-top: 40px;
+    margin-top: 40px;
+    min-height: 300px;
+}
+.section-title {
+    color: #001f3f;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.section-content {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.company-types {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.company-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.hexagon {
+    width: 90px;
+    height: 90px;
+    background-color: #001f3f;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+.company-card:hover .hexagon {
+    transform: translateY(-2px);
+}
+.hexagon svg {
+    width: 45px;
+    height: 45px;
+}
+.hexagon svg path {
+    fill: white;
+}
+.company-label {
+    color: #001f3f;
+    font-size: 18px;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .title-video-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .video-placeholder {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+    .company-types {
+        flex-direction: column;
+        gap: 60px;
     }
 }
