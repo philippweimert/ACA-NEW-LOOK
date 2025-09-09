@@ -1,3 +1,7 @@
+html {
+    overflow-y: scroll;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,12 +17,14 @@ body {
 .top-bar {
     background: #001f3f;
     color: white;
-    padding: 25px 40px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 120px;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-section {
@@ -46,37 +52,6 @@ body {
     font-style: italic;
 }
 
-.announcement-box {
-    background: rgba(255,255,255,0.15);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 350px;
-}
-
-.announcement-box .date {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.announcement-box .title {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.announcement-box .subtitle {
-    font-size: 14px;
-    opacity: 0.9;
-    margin-bottom: 8px;
-}
-
-.announcement-box .link {
-    color: #87CEEB;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 13px;
-}
 
 .acencia-logo svg {
     width: 300px;
@@ -170,6 +145,10 @@ body {
     min-width: 150px;
     background: #333;
     color: white;
+    position: sticky;
+    top: 110px;
+    height: calc(100vh - 110px);
+    overflow-y: auto;
 }
 
 .sidebar-item {
@@ -376,5 +355,149 @@ body {
 
     .form-row .form-group {
         margin-bottom: 20px;
+    }
+}
+
+/* bAV Page Specific Styles */
+.page-title {
+    color: #001f3f;
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #001f3f;
+    padding-bottom: 10px;
+}
+.hero-section {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+.title-video-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+.hero-title {
+    color: #001f3f;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+.video-placeholder {
+    border: 2px solid #001f3f;
+    border-radius: 8px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    position: relative;
+}
+.play-button {
+    width: 60px;
+    height: 60px;
+    background: #001f3f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.video-text {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #001f3f;
+    font-size: 14px;
+}
+.button-row {
+    display: flex;
+}
+.cta-button {
+    background: #001f3f;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.cta-button:hover {
+    background: #003366;
+}
+.section {
+    border-top: 3px solid #001f3f;
+    padding-top: 40px;
+    margin-top: 40px;
+    min-height: 300px;
+}
+.section-title {
+    color: #001f3f;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.section-content {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.company-types {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.company-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.hexagon {
+    width: 90px;
+    height: 90px;
+    background-color: #001f3f;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+.company-card:hover .hexagon {
+    transform: translateY(-2px);
+}
+.hexagon svg {
+    width: 45px;
+    height: 45px;
+}
+.hexagon svg path {
+    fill: white;
+}
+.company-label {
+    color: #001f3f;
+    font-size: 18px;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .title-video-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .video-placeholder {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+    .company-types {
+        flex-direction: column;
+        gap: 60px;
     }
 }
