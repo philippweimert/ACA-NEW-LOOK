@@ -21,12 +21,18 @@ body {
 .top-bar {
     background: #001f3f;
     color: white;
-    padding: 10px 40px;
+    padding: 10px 0; /* Adjusted padding */
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-bar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    z-index: 1000;
+    max-width: 1400px; /* Aligns with .page-container */
+    margin: 0 auto;
+    padding: 0 15px; /* Aligns with .main-wrapper padding */
 }
 
 .logo-section {
@@ -132,6 +138,8 @@ body {
     background: white;
     overflow-y: auto; /* This is the ONLY scrolling area for page content */
     border-left: 1px solid #e8e8e8;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 /* bAV Page Specific Styles */
@@ -337,7 +345,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: stretch; /* Ensures columns are equal height */
+    align-items: stretch;
 }
 
 .contact-info, .contact-form-section {
