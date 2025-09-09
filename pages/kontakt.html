@@ -1,139 +1,68 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACENCIA GmbH - Kontakt</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="logo-section">
-            <div class="acencia-logo">
-                <svg viewBox="0 0 400 68" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
-                    <g id="icon">
-                        <rect x="13" y="8" width="56" height="13" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
-                        <rect x="13" y="28" width="56" height="13" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
-                        <rect x="13" y="48" width="56" height="13" rx="4" ry="4" fill="none" stroke="#FFFFFF" stroke-width="5"/>
-                    </g>
-                    <g id="wordmark">
-                        <text x="78" y="6" class="acencia-text">ACENCIA</text>
-                    </g>
-                    <g id="tagline">
-                        <text x="78" y="51" class="tagline-text">WIR MACHEN BAV EINFACH</text>
-                    </g>
-                </svg>
-            </div>
+<div class="contact-page">
+    <!-- Linke Seite - Kontakt Informationen -->
+    <div class="contact-info">
+        <h2>Kontakt Informationen</h2>
+
+        <div class="info-card">
+            <h3>🏢 Hauptsitz</h3>
+            <p><strong>ACENCIA GmbH</strong></p>
+            <p>Hackenheim, Deutschland</p>
         </div>
 
-        <div class="announcement-box">
-            <div class="date">11.08.2025</div>
-            <div class="title">TOP-News!!!</div>
-            <div class="subtitle">Webinar-Tipp für Vermieter:</div>
-            <div class="subtitle">Der neue degenia-Mietrechtsleitfant T25</div>
-            <div class="link">weiterlesen</div>
+        <div class="info-card">
+            <h3>✉️ E-Mail</h3>
+            <p class="highlight">info@acencia.de</p>
+        </div>
+
+        <div class="info-card">
+            <h3>📞 Telefon</h3>
+            <p class="highlight">+49 671 79 65 8 0</p>
+        </div>
+
+        <div class="info-card">
+            <h3>🕒 Geschäftszeiten</h3>
+            <p><strong>Montag - Freitag:</strong> 9:00 - 18:00</p>
+            <p><strong>Samstag:</strong> 10:00 - 14:00</p>
         </div>
     </div>
 
-    <div class="main-wrapper">
-        <div class="page-container">
-            <!-- Header -->
-            <header class="header">
-                <div class="search-section">
-                    <span class="search-label">Suchbegriff</span>
-                    <input type="text" class="search-input" placeholder="Suchbegriff">
-                    <button class="search-btn">OK</button>
-                </div>
-            </header>
+    <!-- Rechte Seite - Kontaktformular -->
+    <div class="contact-form-section">
+        <h2>Nachricht senden</h2>
 
-            <div class="main-container">
-                <!-- Sidebar -->
-                <aside class="sidebar">
-                    <a href="../index.html"><div class="sidebar-item">Home</div></a>
-                    <a href="bav.html"><div class="sidebar-item">bAV</div></a>
-                    <a href="bkv.html"><div class="sidebar-item">bKV</div></a>
-                    <a href="service.html"><div class="sidebar-item">Service</div></a>
-                    <a href="news.html"><div class="sidebar-item">News</div></a>
-                    <a href="uber-uns.html"><div class="sidebar-item">Über uns</div></a>
-                    <a href="kontakt.html"><div class="sidebar-item active">Kontakt</div></a>
-                </aside>
-
-                <!-- Main Content -->
-                <main class="content">
-                    <div class="contact-page">
-                        <!-- Linke Seite - Kontakt Informationen -->
-                        <div class="contact-info">
-                            <h2>Kontakt Informationen</h2>
-
-                            <div class="info-card">
-                                <h3>🏢 Hauptsitz</h3>
-                                <p><strong>ACENCIA GmbH</strong></p>
-                                <p>Hackenheim, Deutschland</p>
-                            </div>
-
-                            <div class="info-card">
-                                <h3>✉️ E-Mail</h3>
-                                <p class="highlight">info@acencia.de</p>
-                            </div>
-
-                            <div class="info-card">
-                                <h3>📞 Telefon</h3>
-                                <p class="highlight">+49 671 79 65 8 0</p>
-                            </div>
-
-                            <div class="info-card">
-                                <h3>🕒 Geschäftszeiten</h3>
-                                <p><strong>Montag - Freitag:</strong> 9:00 - 18:00</p>
-                                <p><strong>Samstag:</strong> 10:00 - 14:00</p>
-                            </div>
-                        </div>
-
-                        <!-- Rechte Seite - Kontaktformular -->
-                        <div class="contact-form-section">
-                            <h2>Nachricht senden</h2>
-
-                            <div class="form-container">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label>Name *</label>
-                                            <input type="text" placeholder="Ihr vollständiger Name" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>E-Mail *</label>
-                                            <input type="email" placeholder="ihre@email.de" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <label>Unternehmen</label>
-                                            <input type="text" placeholder="Ihr Unternehmen">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Telefon</label>
-                                            <input type="tel" placeholder="+49 (0) 123 456789">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Nachricht *</label>
-                                        <textarea rows="6" placeholder="Wie können wir Ihnen helfen?" required></textarea>
-                                    </div>
-
-                                    <button type="submit" class="submit-button">
-                                        ✈️ Nachricht senden
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
+        <div class="form-container">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" placeholder="Ihr vollständiger Name" required>
                     </div>
-                </main>
-            </div>
+                    <div class="form-group">
+                        <label>E-Mail *</label>
+                        <input type="email" placeholder="ihre@email.de" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Unternehmen</label>
+                        <input type="text" placeholder="Ihr Unternehmen">
+                    </div>
+                    <div class="form-group">
+                        <label>Telefon</label>
+                        <input type="tel" placeholder="+49 (0) 123 456789">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nachricht *</label>
+                    <textarea rows="6" placeholder="Wie können wir Ihnen helfen?" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    ✈️ Nachricht senden
+                </button>
+            </form>
         </div>
     </div>
-
-    <script src="../js/script.js"></script>
-</body>
-</html>
+</div>
