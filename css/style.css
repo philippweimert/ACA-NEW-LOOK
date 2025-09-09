@@ -138,8 +138,7 @@ body {
     background: white;
     overflow-y: auto; /* This is the ONLY scrolling area for page content */
     border-left: 1px solid #e8e8e8;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-radius: 12px;
 }
 
 /* bAV Page Specific Styles */
