@@ -148,7 +148,6 @@ body {
     top: 110px;
     height: calc(100vh - 110px);
     overflow-y: auto;
-    padding: 20px; /* Added padding */
 }
 
 .sidebar-item {
