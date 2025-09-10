@@ -8,17 +8,24 @@ When you need to add a new content section to a page, please use the following s
 
 ### Key Features
 - A prominent title.
-- A horizontal line above the section content to visually separate it from the content above.
+- A horizontal line **below** the title to visually separate it from the section content.
 - Consistent spacing.
+- A minimum height to ensure visual consistency, even with little content.
 
-### HTML Structure
+### Implementation via JavaScript
 
-To create a standard section, wrap the entire content block in a `<div>` with the class `section`. Inside this div, use an `<h2>` with the class `section-title` for the section's heading.
+**Important:** These standard sections are added dynamically to all pages except "Kontakt" by the `insertEmptySections` function in `js/script.js`. **Do not manually add the HTML for these sections to the page files.**
+
+If you need to change the number of sections or the pages they appear on, modify the logic in `js/script.js`.
+
+### HTML Structure (for reference)
+
+The `insertEmptySections` function generates the following HTML structure for each section. Note that the `<h2>` title comes **before** the `<div>` that has the top border, placing the title above the line.
 
 ```html
-<!-- Standard Content Section -->
+<!-- Dynamically Injected Standard Section -->
+<h2 class="section-title">Your Section Title Here</h2>
 <div class="section">
-    <h2 class="section-title">Your Section Title Here</h2>
     <div class="section-content">
         <!-- Your content (text, images, grids, etc.) goes here. -->
         <p>This is a paragraph inside the standard section.</p>
@@ -31,9 +38,9 @@ To create a standard section, wrap the entire content block in a `<div>` with th
 The necessary styles are already defined in `css/style.css`. Here is a summary of the key classes and their properties:
 
 - **`.section`**:
-  - `border-top: 3px solid #001f3f;` (This creates the top line)
-  - `padding-top: 40px;` (Space below the top line)
-  - `margin-top: 40px;` (Space above the top line)
+  - `border-top: 3px solid #001f3f;` (This creates the separator line)
+  - `padding-top: 40px;` (Space below the line)
+  - `margin-top: 30px;` (Space between the title and the line, controlled by the title's margin-bottom)
   - `min-height: 300px;`
 
 - **`.section-title`**:
@@ -41,5 +48,3 @@ The necessary styles are already defined in `css/style.css`. Here is a summary o
   - `font-size: 28px;`
   - `font-weight: bold;`
   - `margin-bottom: 30px;`
-
-**Note on the bottom line:** The user mentioned a line *below* the title. In the current design, this bottom line is only applied to the main page title (`<h1 class="page-title">`). The standard section title (`.section-title`) does not have a bottom border. Please adhere to this pattern unless specifically instructed otherwise.

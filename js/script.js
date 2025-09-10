@@ -12,6 +12,36 @@ document.addEventListener('DOMContentLoaded', () => {
         '/pages/kontakt.html': 'pages/kontakt.html'
     };
 
+    const insertEmptySections = () => {
+        const contentArea = document.querySelector('.content');
+        if (!contentArea) return;
+
+        for (let i = 1; i <= 4; i++) {
+            // Create the title
+            const title = document.createElement('h2');
+            title.className = 'section-title';
+            title.textContent = `Abschnittsüberschrift ${i}`;
+
+            // Create the section div
+            const section = document.createElement('div');
+            section.className = 'section';
+
+            // Create the section content
+            const sectionContent = document.createElement('div');
+            sectionContent.className = 'section-content';
+
+            const paragraph = document.createElement('p');
+            paragraph.textContent = 'Hier kommt der Inhalt für diesen Abschnitt hin.';
+
+            sectionContent.appendChild(paragraph);
+            section.appendChild(sectionContent);
+
+            // Append title and section to the content area
+            contentArea.appendChild(title);
+            contentArea.appendChild(section);
+        }
+    };
+
     const loadContent = async (path) => {
         try {
             // Always fetch from the root
@@ -22,6 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const html = await response.text();
             content.innerHTML = html;
             setActiveLink(window.location.pathname);
+
+            // Add empty sections to all pages except 'kontakt'
+            if (window.location.pathname !== '/pages/kontakt.html') {
+                insertEmptySections();
+            }
+
         } catch (error) {
             content.innerHTML = '<p>Error loading page. Please try again.</p>';
             console.error('Failed to load page:', error);
