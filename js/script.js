@@ -17,11 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!contentArea) return;
 
         for (let i = 1; i <= 4; i++) {
-            // Create the title
-            const title = document.createElement('h2');
-            title.className = 'section-title';
-            title.textContent = `Abschnittsüberschrift ${i}`;
-
             // Create the section div
             const section = document.createElement('div');
             section.className = 'section';
@@ -36,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sectionContent.appendChild(paragraph);
             section.appendChild(sectionContent);
 
-            // Append title and section to the content area
-            contentArea.appendChild(title);
+            // Append section to the content area
             contentArea.appendChild(section);
         }
     };

@@ -4,47 +4,38 @@ This document provides instructions and guidelines for AI agents working on this
 
 ## Standard Content Section
 
-When you need to add a new content section to a page, please use the following structure. This design is based on the "Wir machen bAV einfach" section and is intended to be the standard for all new sections.
+The visual language of the site uses sections separated by horizontal lines. A standard section should be used for most content.
 
-### Key Features
-- A prominent title.
-- A horizontal line **below** the title to visually separate it from the section content.
-- Consistent spacing.
-- A minimum height to ensure visual consistency, even with little content.
+### Page Structure
+A typical page should have a main `<h1 class="page-title">` which has a bottom border that serves as the first separator line.
 
-### Implementation via JavaScript
+Following the title, there can be multiple content sections. Each subsequent section should be a `<div class="section">`, which has a `border-top` that creates the necessary separator line.
 
-**Important:** These standard sections are added dynamically to all pages except "Kontakt" by the `insertEmptySections` function in `js/script.js`. **Do not manually add the HTML for these sections to the page files.**
+### Dynamic Empty Sections
 
-If you need to change the number of sections or the pages they appear on, modify the logic in `js/script.js`.
+**Important:** On all pages except "Kontakt", four empty, **title-less** sections are added dynamically by the `insertEmptySections` function in `js/script.js`. This is done to ensure a consistent page length and structure. **Do not manually add this HTML structure to the page files.**
 
-### HTML Structure (for reference)
+If you need to change the number of empty sections or the pages they appear on, modify the logic in `js/script.js`.
 
-The `insertEmptySections` function generates the following HTML structure for each section. Note that the `<h2>` title comes **before** the `<div>` that has the top border, placing the title above the line.
+### HTML Structure of a Dynamic Section (for reference)
+
+The `insertEmptySections` function generates the following HTML structure for each empty section:
 
 ```html
 <!-- Dynamically Injected Standard Section -->
-<h2 class="section-title">Your Section Title Here</h2>
 <div class="section">
     <div class="section-content">
-        <!-- Your content (text, images, grids, etc.) goes here. -->
-        <p>This is a paragraph inside the standard section.</p>
+        <p>This is a placeholder paragraph inside the section.</p>
     </div>
 </div>
 ```
 
 ### CSS Styling
 
-The necessary styles are already defined in `css/style.css`. Here is a summary of the key classes and their properties:
+The necessary styles are already defined in `css/style.css`.
 
 - **`.section`**:
   - `border-top: 3px solid #001f3f;` (This creates the separator line)
   - `padding-top: 40px;` (Space below the line)
-  - `margin-top: 30px;` (Space between the title and the line, controlled by the title's margin-bottom)
+  - `margin-top: 40px;` (Space above the line)
   - `min-height: 300px;`
-
-- **`.section-title`**:
-  - `color: #001f3f;`
-  - `font-size: 28px;`
-  - `font-weight: bold;`
-  - `margin-bottom: 30px;`
