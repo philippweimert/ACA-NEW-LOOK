@@ -89,6 +89,54 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial load
     router();
 
+    // Event delegation for the contact form
+    content.addEventListener('submit', async (e) => {
+        if (e.target.id === 'contact-form') {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            // Get values from the form by ID, since FormData doesn't work with our setup
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            const payload = {
+                name,
+                email,
+                company,
+                phone,
+                message
+            };
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('Nachricht erfolgreich gesendet!');
+                    form.reset();
+                } else {
+                    alert(`Fehler: ${result.message}`);
+                }
+            } catch (error) {
+                console.error('Fehler beim Senden des Formulars:', error);
+                alert('Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.');
+            }
+        }
+    });
+
     // Scroll to top functionality
     const scrollToTopButton = document.getElementById('scroll-to-top');
     if (scrollToTopButton) {

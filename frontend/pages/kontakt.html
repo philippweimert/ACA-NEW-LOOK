@@ -23,32 +23,32 @@
         <h2>Nachricht senden</h2>
 
         <div class="form-container">
-            <form>
+            <form id="contact-form">
                 <div class="form-row">
                     <div class="form-group">
                         <label>Name *</label>
-                        <input type="text" placeholder="Ihr vollständiger Name" required>
+                        <input type="text" id="name" placeholder="Ihr vollständiger Name" required>
                     </div>
                     <div class="form-group">
                         <label>E-Mail *</label>
-                        <input type="email" placeholder="ihre@email.de" required>
+                        <input type="email" id="email" placeholder="ihre@email.de" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Unternehmen</label>
-                        <input type="text" placeholder="Ihr Unternehmen">
+                        <input type="text" id="company" placeholder="Ihr Unternehmen">
                     </div>
                     <div class="form-group">
                         <label>Telefon</label>
-                        <input type="tel" placeholder="+49 (0) 123 456789">
+                        <input type="tel" id="phone" placeholder="+49 (0) 123 456789">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Nachricht *</label>
-                    <textarea rows="6" placeholder="Wie können wir Ihnen helfen?" required></textarea>
+                    <textarea id="message" rows="6" placeholder="Wie können wir Ihnen helfen?" required></textarea>
                 </div>
 
                 <button type="submit" class="submit-button">
