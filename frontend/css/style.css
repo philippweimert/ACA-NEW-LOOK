@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #e8e8e8;
+    background: #001f3f;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -120,10 +120,10 @@ body {
 }
 
 .sidebar-item.active {
-    background: white;
-    color: #001f3f;
+    background: #003366;
+    color: white;
     font-weight: bold;
-    border: 1px solid #001f3f;
+    border: 1px solid white;
 }
 
 .sidebar a {
@@ -135,18 +135,19 @@ body {
 .content {
     flex: 1;
     padding: 40px;
-    background: white;
+    background: #001f3f;
+    color: white;
     overflow-y: auto; /* This is the ONLY scrolling area for page content */
-    border-left: 1px solid #e8e8e8;
+    border-left: 1px solid white;
     border-radius: 12px;
 }
 
 /* bAV Page Specific Styles */
 .page-title {
-    color: #001f3f;
+    color: white;
     font-size: 32px;
     margin-bottom: 20px;
-    border-bottom: 3px solid #001f3f;
+    border-bottom: 3px solid white;
     padding-bottom: 10px;
 }
 .hero-section {
@@ -187,14 +188,14 @@ body {
 
 .feature-item::before {
     content: '✓'; /* Checkmark symbol */
-    color: #001f3f; /* Blue symbol */
+    color: white; /* Blue symbol */
     font-weight: bold;
     position: absolute;
     left: 0;
     top: 0;
 }
 .hero-title {
-    color: #001f3f;
+    color: white;
     font-size: 36px;
     font-weight: bold;
     margin: 0;
@@ -244,19 +245,19 @@ body {
 }
 
 .section {
-    border-top: 3px solid #001f3f;
+    border-top: 3px solid white;
     padding-top: 40px;
     margin-top: 40px;
     min-height: 300px;
 }
 .section-title {
-    color: #001f3f;
+    color: white;
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 .section-content {
-    color: #666;
+    color: white;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -295,7 +296,7 @@ body {
     fill: white;
 }
 .company-label {
-    color: #001f3f;
+    color: white;
     font-size: 18px;
     font-weight: 500;
 }
@@ -405,18 +406,18 @@ input:checked + .slider:before {
 }
 
 .contact-info, .contact-form-section {
-    background: #f9f9f9;
+    background: #001f3f;
     padding: 30px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid white;
 }
 
 .contact-info h2, .contact-form-section h2 {
     font-size: 24px;
-    color: #001f3f;
+    color: white;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #001f3f;
+    border-bottom: 2px solid white;
 }
 
 .info-box {
@@ -425,19 +426,19 @@ input:checked + .slider:before {
 
 .info-box h3 {
     font-size: 18px;
-    color: #001f3f;
+    color: white;
     margin-top: 15px;
     margin-bottom: 5px;
 }
 
 .info-box p {
     font-size: 16px;
-    color: #333;
+    color: white;
 }
 
 .info-box .highlight {
     font-weight: bold;
-    color: #001f3f;
+    color: white;
 }
 
 .form-container {
@@ -459,7 +460,7 @@ input:checked + .slider:before {
 
 .form-group label {
     font-size: 14px;
-    color: #333;
+    color: white;
     margin-bottom: 5px;
 }
 
@@ -467,16 +468,18 @@ input:checked + .slider:before {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 4px;
     font-size: 16px;
+    background-color: #001f3f;
+    color: white;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #001f3f;
-    box-shadow: 0 0 5px rgba(0, 31, 63, 0.2);
+    border-color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
 .submit-button {
